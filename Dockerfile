@@ -49,7 +49,6 @@ RUN yum install -y unzip epel-release perl perl-devel libxml2-devel openssl-deve
 
 #下载php7.2.1
 RUN cd /usr/local/src
-RUN export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;
 RUN wget https://www.php.net/distributions/php-7.2.1.tar.gz
 RUN ls -a 
 RUN tar -zxvf php-7.2.1.tar.gz
