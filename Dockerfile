@@ -55,7 +55,7 @@ RUN tar -zxvf php-7.2.1.tar.gz
 
 #下载mysql5.6.42
 RUN cd /usr/local/src
-RUN wget http://mirrors.ustc.edu.cn/mysql-ftp/Downloads/MySQL-5.6/mysql-5.6.42-linux-glibc2.12-x86_64.tar.gz
+RUN wget http://ftp.jaist.ac.jp/pub/mysql/Downloads/MySQL-5.6/mysql-5.6.42-linux-glibc2.12-i686.tar.gz
 RUN tar -zxvf mysql-5.6.42-linux-glibc2.12-x86_64.tar.gz
 RUN mv ./mysql-5.6.42-linux-glibc2.12-x86_64 /usr/local/mysql
 
