@@ -31,7 +31,7 @@ RUN echo 'root:zztXXXXzzt'|chpasswd
 RUN yum install -y apr-devel apr apr-util apr-util-devel pcre-devel gcc make
 
 #下载httpd
-RUN cd /usr/local/src
+WORKDIR /usr/local/src
 RUN wget http://apache.01link.hk/httpd/httpd-2.4.39.tar.gz
 RUN tar -zxvf httpd-2.4.39.tar.gz
 
@@ -48,13 +48,13 @@ RUN /usr/local/apache2/bin/httpd
 RUN yum install -y unzip epel-release perl perl-devel libxml2-devel openssl-devel bzip2-devel libjpeg libjpeg-devel libpng-devel freetype-devel libmcrypt-devel
 
 #下载php7.2.1
-RUN cd /usr/local/src
+WORKDIR /usr/local/src
 RUN wget https://www.php.net/distributions/php-7.2.1.tar.gz
 RUN ls -a 
 RUN tar -zxvf php-7.2.1.tar.gz
 
 #下载mysql5.6.42
-RUN cd /usr/local/src
+WORKDIR /usr/local/src
 RUN wget http://ftp.jaist.ac.jp/pub/mysql/Downloads/MySQL-5.6/mysql-5.6.42-linux-glibc2.12-x86_64.tar.gz
 RUN tar -zxvf mysql-5.6.42-linux-glibc2.12-x86_64.tar.gz
 RUN mv ./mysql-5.6.42-linux-glibc2.12-x86_64 /usr/local/mysql
